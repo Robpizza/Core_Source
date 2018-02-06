@@ -1,0 +1,32 @@
+Broadcast-prefix: "&6&lBroadcast &8&l>> &f"
+Clearchat-prefix: "&6&lClearchat  &8&l>> &f"
+Core-prefix: "&6&lCore  &8&l>> &f"
+Gamemode-prefix: "&6&lGamemode  &8&l>> &f"
+Fly-prefix: "&6&lFly  &8&l>> &f"
+Ignore-prefix: "&6&lIgnore  &8&l>> &f"
+Message-prefix: "&6&lMsg  &8&l>> &f"
+Spawn-prefix: "&6&lSpawn  &8&l>> &f"
+Teleport-prefix: "&6&lTeleport  &8&l>> &f"
+Time-prefix: "&6&lTime  &8&l>> &f"
+Tpa-prefix: "&6&lTeleport  &8&l>> &f"
+Vanish-prefix: "&6&lVanish  &8&l>> &f"
+Warp-prefix: "&6&lWarp  &8&l>> &f"
+Holograms-prefix: "&6&lHolograms  &8&l>> &f"
+
+JoinMessage: "&7Welcome back {prefix}{player}."
+LeaveMessage: "&7{player} left the server."
+Msg-sender: "&bMe &7&l>>> &6{player}"
+Msg-receiver: "&6{player} &7&l>>> &bMe"
+Clearchat-msg: "&f{player} &acleared the chat!"
+Gamemode: "&fYour gamemode is changed to {gamemode}"
+
+Core-Help:
+  - "&eHelp line 1"
+  - "&dHelp line 2"
+  - "&bHelp line 3"
+
+Welcome-motd:
+  - "&7&lWelcome to"
+  - "&aThis server"
+  - "&6We now accept more over"
+  - "&620 Lines of text!"

@@ -1,0 +1,126 @@
+name: Core
+version: 1.4.1
+author: Robpizza
+main: me.robpizza.Main
+
+commands:
+  broadcast:
+    usage: /<command> [message]
+    desciption: This command will broadcast a message in the chat.
+  clearchat:
+    usage: /<command>
+    desciption: This command will clear the chat.
+  core:
+    usage: /<command>
+    desciption: This is the main command of the plugin.
+  fly:
+    usage: /<command> [player]
+    desciption: This command will toggle your or someone else fky.
+  gm:
+    usage: /<command> [gamemode]
+    desciption: This command will change your gamemode.
+  ignore:
+    usage: /<command> [player]
+    description: This command is used to ignore players.
+  msg:
+    usage: /<command> [player] [message]
+    desciption: With this command you can message a player with a personal message.
+  spawn:
+    usage: /<command>
+    desciption: This command will teleport you back to the spawn.
+  setspawn:
+    usage: /<command>
+    desciption: This command will set the spawn on your current 'head' location.
+  time:
+    usage: /<command> [day/night]
+    desciption: With this command you can set the time
+  tp:
+    usage: /<command> [player] [target]
+    desciption: With this command you can teleport yourself or someone else.
+  tpa:
+    usage: /<command> [player]
+    desciption: With this command you can request a teleport.
+  tpaccept:
+    usage: /<command>
+    desciption: With this command you accept a teleport request.
+  tpdeny:
+    usage: /<command>
+    desciption: With this command you deny a teleport request.
+  vanish:
+    usage: /<command> [player]
+    description: With this command you can enable/disable vanish.
+    aliases: v
+  warp:
+    usage: /<command> [warp]
+    desciption: This command will teleport you to a specific location.
+  setwarp:
+    usage: /<command>
+    desciption: This command will set a warp on your current 'head' location.
+  delwarp:
+    usage: /<command> [warp]
+    desciption: This command will delete the given warp name.
+  support:
+    usage: /<command>
+    description: This command will return some usefull links.
+  hologram:
+    usage: /<command>
+    description: Ignore this command.
+
+permissions:
+  core.broadcast:
+    default: op
+    description: This permission gives you the permission to use the /broadcast command.
+  core.clearchat:
+    default: op
+    description: This permission gives you the permission to use the /clearchat command.
+  core.reload:
+    default: op
+    description: This permission gives you the permission to reload all the Core configs.
+  core.fly:
+    default: op
+    description: This permission gives you the permission to use the /fly command.
+  core.fly.other:
+    default: op
+    description: This permission gives you the permission to enable fly for other players.
+  core.gamemode:
+    default: op
+    description: This permission gives you the permission to use the /gm command.
+  core.ignore.staff:
+    default: op
+    description: This permission tells the plugin you're a staff members, this means players with this permission cant be ignored.
+  core.setspawn:
+    default: op
+    description: This permission gives you the permission to use the /setspawn command.
+  core.time:
+    default: op
+    description: This permission gives you the permission to use the /time command.
+  core.tp:
+    default: op
+    description: This permission gives you the permission to use the /tp command.
+  core.tpa:
+    default: op
+    description: This permission gives you the permission to use the /tpa, /tpaccept and /tpdeny commands.
+  core.vanish:
+    default: op
+    description: This permission gives you the permission to use the /vanish command.
+  core.vanish.others:
+    default: op
+    description: This permission gives you the permission to use the /vanish [player] command.
+  core.setwarp:
+    default: op
+    description: This permission gives you the permission to set warps.
+  core.delwarp:
+    default: op
+    description: This permission gives you the permission to delete warps.
+  core.bypass:
+    default: op
+    description: This permissions allows you to break and place blocks in the protected world.
+  core.hologram:
+    default: op
+    description: This permission gives you the permissions to create holograms.
+  core.chat.color:
+    default: op
+    description: This permission gives someone access to color chat.
+  core.sign.color:
+    default: op
+    description: This permission gives someone access to color signs.

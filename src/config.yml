@@ -1,0 +1,23 @@
+opt-out: true
+serverUuid:
+#This is the world which is protected against grief.
+Protected-world: "world"
+
+#If set to true players are instandly respawned in the Protected-world.
+InstandRespawn: true
+
+#Custom Join/Leave messages.
+JoinLeaveMessage: true
+
+#Teleport players when they reached LowestY.
+VoidTeleport: true
+LowestY: 0
+
+#The MOTD players will see in the 'Multiplayer' tab.
+SystemMotd: "&cThis servers is running Core {version}"
+
+#These commands are blocked while a player is in vanish.
+BlockedCommands:
+  - spawn
+  - warp
+  - gm
