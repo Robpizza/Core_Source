@@ -2,7 +2,6 @@ package me.robpizza;
 
 import me.robpizza.core.commands.*;
 import me.robpizza.core.listeners.*;
-import me.robpizza.core.objects.Hologram;
 import me.robpizza.core.plugin.Configs;
 import me.robpizza.core.plugin.Metrics;
 import org.bukkit.Bukkit;

@@ -2,8 +2,6 @@ package me.robpizza.core.commands;
 
 import me.robpizza.Main;
 import me.robpizza.core.objects.Hologram;
-import me.robpizza.core.objects.Holograms;
-import me.robpizza.core.plugin.Configs;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -43,7 +41,7 @@ public class HologramCmd implements CommandExecutor {
                         p.sendMessage(ChatColor.translateAlternateColorCodes('&', Prefix + "&cUse /hologram create <name> <text>"));
                         return true;
                     }
-                    List<String> lines = new ArrayList<String>();
+                    List<String> lines = new ArrayList<>();
                     StringBuilder str = new StringBuilder("");
                     int arguments = 0;
                     for (String msg : args) {
@@ -61,7 +59,7 @@ public class HologramCmd implements CommandExecutor {
                             continue;
                         }
 
-                        if(!(str == null || str.toString().equals(""))) {
+                        if(!(str.toString().equals(""))) {
                             str.append(msg + " ");
                             continue;
                         }

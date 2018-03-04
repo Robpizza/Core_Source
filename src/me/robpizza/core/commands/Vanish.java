@@ -22,12 +22,12 @@ public class Vanish implements CommandExecutor {
     }
 
 
-    private static ArrayList<UUID> vanish = new ArrayList<UUID>();
-    HashMap<UUID, Location> location = new HashMap<UUID, Location>();
-    HashMap<UUID, ItemStack[]> itemsaves = new HashMap<UUID, ItemStack[]>();
-    HashMap<UUID, ItemStack[]> armorsaves = new HashMap<UUID, ItemStack[]>();
+    private ArrayList<UUID> vanish = new ArrayList<UUID>();
+    private HashMap<UUID, Location> location = new HashMap<UUID, Location>();
+    private HashMap<UUID, ItemStack[]> itemsaves = new HashMap<UUID, ItemStack[]>();
+    private HashMap<UUID, ItemStack[]> armorsaves = new HashMap<UUID, ItemStack[]>();
 
-    String Prefix = ChatColor.translateAlternateColorCodes('&',Main.configs().getMessagesConfig().getString("Vanish-prefix") + " ");
+    private String Prefix = ChatColor.translateAlternateColorCodes('&',Main.configs().getMessagesConfig().getString("Vanish-prefix") + " ");
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String Commandlabel, String[] args) {
@@ -103,7 +103,7 @@ public class Vanish implements CommandExecutor {
         }
     }
 
-    public static ArrayList<UUID> getVanish() {
+    public ArrayList<UUID> getVanish() {
         return vanish;
     }
 

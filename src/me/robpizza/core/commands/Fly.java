@@ -14,14 +14,13 @@ import java.util.UUID;
 public class Fly implements CommandExecutor {
     public Fly() {}
     static Fly instance = new Fly();
-
     public static Fly getInstance() {
         return instance;
     }
 
-    public static ArrayList<UUID> fly = new ArrayList<UUID>();
+    private static ArrayList<UUID> fly = new ArrayList<UUID>();
 
-    String Prefix = Main.configs().getMessagesConfig().getString("Fly-prefix");
+    private String Prefix = Main.configs().getMessagesConfig().getString("Fly-prefix");
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if(sender instanceof Player) {
             Player p = (Player) sender;
@@ -77,7 +76,7 @@ public class Fly implements CommandExecutor {
         p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&fFly is &aenabled!"));
     }
 
-    public static ArrayList<UUID> getFly() {
+    public ArrayList<UUID> getFly() {
         return fly;
     }
 }
