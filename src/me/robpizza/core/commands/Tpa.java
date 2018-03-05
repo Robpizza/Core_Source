@@ -43,7 +43,7 @@ public class Tpa implements CommandExecutor {
                     public void run() {
                         killTask(t);
                     }
-                }, 15 * 20L);
+                }, Main.configs().getCoreConfig().getInt("tpa-timeout") * 20L);
             }
             if(cmd.getName().equalsIgnoreCase("tpaccept")) {
                 if(!p.hasPermission("core.tpa")) {
@@ -71,16 +71,15 @@ public class Tpa implements CommandExecutor {
 
 
 
-    public void sendReqeust(Player p, Player r) {
+    private void sendReqeust(Player p, Player r) {
         teleportrequest.put(r.getUniqueId(), p.getUniqueId());
         p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&fTeleport request send to " + r.getName()));
         r.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&f" + p.getName() + " wants to teleport to you."));
         r.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&a/tpaccept &for &c/tpdeny"));
-        return;
     }
 
-    public void requestBoolean(Player p, boolean r) {
-        if(r == true) {
+    private void requestBoolean(Player p, boolean r) {
+        if(r) {
             if(teleportrequest.containsKey(p.getUniqueId())) {
                 UUID uuid = teleportrequest.get(p.getUniqueId());
                 Player t = Bukkit.getServer().getPlayer(uuid);
@@ -89,10 +88,8 @@ public class Tpa implements CommandExecutor {
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&f" + t.getName() + " is teleporting to you."));
                 t.teleport(p);
                 teleportrequest.remove(p.getUniqueId());
-                return;
             } else {
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&cThe teleport request expired."));
-                return;
             }
         } else {
             if(teleportrequest.containsKey(p.getUniqueId())) {
@@ -102,20 +99,19 @@ public class Tpa implements CommandExecutor {
                 target.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + p.getName() + " denied your teleport request."));
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "Teleport request from " + target.getName() + " denied."));
                 teleportrequest.remove(p.getUniqueId());
-                return;
             } else {
                 p.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&cThe teleport request expired."));
             }
         }
     }
 
-    public boolean killTask(Player p) {
+    private boolean killTask(Player p) {
         if(teleportrequest.containsKey(p.getUniqueId())) {
 
             UUID uuid = teleportrequest.get(p.getUniqueId());
             Player target = Bukkit.getServer().getPlayer(uuid);
             if(target != null) {
-                target.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&cYour teleport request to " +p.getName() + " timed out."));
+                target.sendMessage(ChatColor.translateAlternateColorCodes('&',Prefix + "&cYour teleport request to " + p.getName() + " timed out."));
             }
             teleportrequest.remove(p.getUniqueId());
             return true;

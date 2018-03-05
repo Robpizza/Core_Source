@@ -13,7 +13,7 @@ Vanish-prefix: "&6&lVanish  &8&l>> &f"
 Warp-prefix: "&6&lWarp  &8&l>> &f"
 Holograms-prefix: "&6&lHolograms  &8&l>> &f"
 
-JoinMessage: "&7Welcome back {prefix}{player}."
+JoinMessage: "&7Welcome back {player}."
 LeaveMessage: "&7{player} left the server."
 Msg-sender: "&bMe &7&l>>> &6{player}"
 Msg-receiver: "&6{player} &7&l>>> &bMe"

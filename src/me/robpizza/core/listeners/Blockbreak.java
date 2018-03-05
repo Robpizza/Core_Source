@@ -12,9 +12,11 @@ public class Blockbreak implements Listener {
     public void onBlockbreak(BlockBreakEvent e) {
         Player p = e.getPlayer();
         CPlayer cPlayer = new CPlayer(p);
-        if(!p.hasPermission("core.bypass") || !p.isOp() || cPlayer.isVanish()) {
-            if (p.getLocation().getWorld().getName().equals(Main.configs().getCoreConfig().getString("Protected-world"))) {
-                e.setCancelled(true);
+        if(Main.configs().getCoreConfig().getBoolean("Enabled")) {
+            if (!p.hasPermission("core.bypass") || !p.isOp() || cPlayer.isVanish()) {
+                if (p.getLocation().getWorld().getName().equals(Main.configs().getCoreConfig().getString("Protected-world"))) {
+                    e.setCancelled(true);
+                }
             }
         }
     }

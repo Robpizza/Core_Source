@@ -3,7 +3,6 @@ package me.robpizza;
 import me.robpizza.core.commands.*;
 import me.robpizza.core.listeners.*;
 import me.robpizza.core.plugin.Configs;
-import me.robpizza.core.plugin.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,9 +17,6 @@ public class Main extends JavaPlugin {
         configs().setup(this);
         registerCommands();
         registerListeners();
-        Metrics metrics = new Metrics(this);
-
-
 
         Bukkit.getLogger().log(Level.INFO, "");
         Bukkit.getLogger().log(Level.INFO, "[CORE] Listeners registered succesful!");

@@ -12,9 +12,20 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Joinevent implements Listener {
+
     @EventHandler
     public void joinEvent(PlayerJoinEvent e) {
         Player p = e.getPlayer();
+
+
+
+        if (Main.configs().getMessagesConfig().getBoolean("JoinLeaveMessage")) {
+            String JoinMessage = Main.configs().getMessagesConfig().getString("JoinMessage");
+            JoinMessage = JoinMessage.replace("{player}", p.getName());
+            e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', JoinMessage));
+        }
+
+
         for (int i = 1; i < 100; i++) {
             p.sendMessage("");
         }
@@ -25,18 +36,10 @@ public class Joinevent implements Listener {
         for (String m : joinMotd) {
             m = m.replace("{time}", Calendar.HOUR_OF_DAY + ":" + cal.get(Calendar.MINUTE));
             m = m.replace("{player}", p.getName());
-            m = m.replace("{world}", p.getLocation().getWorld().getName().toString());
+            m = m.replace("{world}", p.getLocation().getWorld().getName());
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', m));
         }
         p.sendMessage("");
         p.performCommand("spawn");
-
-
-        if (Main.configs().getMessagesConfig().getBoolean("JoinLeaveMessage")) {
-                String JoinMessage = Main.configs().getMessagesConfig().getString("JoinMessage");
-                JoinMessage = JoinMessage.replace("{player}", p.getName());
-                JoinMessage = JoinMessage.replace("{prefix}", "");
-                e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', JoinMessage));
-        }
     }
 }

@@ -15,6 +15,5 @@ public class Moveevent implements Listener {
                 p.performCommand("spawn");
             }
         }
-        return;
     }
 }

@@ -9,13 +9,13 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class Leaveevent implements Listener {
     @EventHandler
-    public void leaveEvent(PlayerQuitEvent event) {
-        Player p = event.getPlayer();
+    public void leaveEvent(PlayerQuitEvent e) {
+        Player p = e.getPlayer();
 
         if(Main.configs().getCoreConfig().getBoolean("JoinLeaveMessage")) {
                 String LeaveMessage = Main.configs().getMessagesConfig().getString("LeaveMessage");
                 LeaveMessage = LeaveMessage.replace("{player}", p.getName());
-                event.setQuitMessage(ChatColor.translateAlternateColorCodes('&', LeaveMessage));
+                e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', LeaveMessage));
         }
     }
 }

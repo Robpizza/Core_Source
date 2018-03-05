@@ -12,13 +12,12 @@ public class Blockplace implements Listener {
     public void onBlockplace(BlockPlaceEvent e) {
         Player p = e.getPlayer();
         CPlayer cPlayer = new CPlayer(p);
-        if(!p.hasPermission("core.bypass") || !p.isOp() || cPlayer.isVanish()) {
-            if (p.getLocation().getWorld().getName().equals(Main.configs().getCoreConfig().getString("Protected-world"))) {
-                e.setCancelled(true);
-                return;
+        if(Main.configs().getCoreConfig().getBoolean("Enabled")) {
+            if (!p.hasPermission("core.bypass") || !p.isOp() || cPlayer.isVanish()) {
+                if (p.getLocation().getWorld().getName().equals(Main.configs().getCoreConfig().getString("Protected-world"))) {
+                    e.setCancelled(true);
+                }
             }
-            return;
         }
-        return;
     }
 }

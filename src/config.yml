@@ -1,6 +1,5 @@
-opt-out: true
-serverUuid:
 #This is the world which is protected against grief.
+Enabled: true
 Protected-world: "world"
 
 #If set to true players are instandly respawned in the Protected-world.
@@ -12,6 +11,9 @@ JoinLeaveMessage: true
 #Teleport players when they reached LowestY.
 VoidTeleport: true
 LowestY: 0
+
+#TPA Timeout
+tpa-timeout: 60
 
 #The MOTD players will see in the 'Multiplayer' tab.
 SystemMotd: "&cThis servers is running Core {version}"
