@@ -47,11 +47,16 @@ public class Main extends JavaPlugin {
         this.getCommand("core").setExecutor(new Corecommand());
         this.getCommand("fly").setExecutor(new Fly());
         this.getCommand("gm").setExecutor(new Gamemode());
+        this.getCommand("gms").setExecutor(new Gamemode());
+        this.getCommand("gmc").setExecutor(new Gamemode());
+        this.getCommand("gma").setExecutor(new Gamemode());
+        this.getCommand("gmsp").setExecutor(new Gamemode());
         this.getCommand("ignore").setExecutor(new Ignore());
         this.getCommand("msg").setExecutor(new Msg());
         this.getCommand("spawn").setExecutor(new Spawn());
         this.getCommand("setspawn").setExecutor(new Spawn());
-        this.getCommand("time").setExecutor(new Time());
+        this.getCommand("day").setExecutor(new Time());
+        this.getCommand("night").setExecutor(new Time());
         this.getCommand("tp").setExecutor(new Teleport());
         this.getCommand("tpa").setExecutor(new Tpa());
         this.getCommand("tpaccept").setExecutor(new Tpa());

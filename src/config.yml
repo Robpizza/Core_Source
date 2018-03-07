@@ -16,7 +16,7 @@ LowestY: 0
 tpa-timeout: 60
 
 #The MOTD players will see in the 'Multiplayer' tab.
-SystemMotd: "&cThis servers is running Core {version}"
+SystemMotd: "&e➤ &fThis servers is running &6Core {version}"
 
 #These commands are blocked while a player is in vanish.
 BlockedCommands:

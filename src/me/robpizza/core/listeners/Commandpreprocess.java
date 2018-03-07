@@ -18,12 +18,13 @@ public class Commandpreprocess implements Listener {
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent e) {
         Player p = e.getPlayer();
-        CPlayer cPlayer = new CPlayer(p);
 
-        if(cPlayer.isVanish()) {
+        CPlayer cPlayer = new CPlayer(p.getUniqueId());
+
+        if (cPlayer.isVanish()) {
             List<String> cmds = Main.configs().getCoreConfig().getStringList("BlockedCommands");
-            for(String command : cmds) {
-                if(e.getMessage().equalsIgnoreCase("/" + command)) {
+            for (String command : cmds) {
+                if (e.getMessage().equalsIgnoreCase("/" + command)) {
                     p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&lERROR &8&l>> &cYou can't use this command while you're in vanish!"));
                     e.setCancelled(true);
                 }

@@ -1,5 +1,5 @@
 name: Core
-version: 1.4.1
+version: 1.4.2
 author: Robpizza
 main: me.robpizza.Main
 
@@ -7,6 +7,7 @@ commands:
   broadcast:
     usage: /<command> [message]
     desciption: This command will broadcast a message in the chat.
+    aliases: [bc, bcast]
   clearchat:
     usage: /<command>
     desciption: This command will clear the chat.
@@ -19,6 +20,22 @@ commands:
   gm:
     usage: /<command> [gamemode]
     desciption: This command will change your gamemode.
+  gms:
+    usage: /<command> [gamemode]
+    desciption: This command will change your gamemode.
+    aliases: [survival]
+  gmc:
+    usage: /<command> [gamemode]
+    desciption: This command will change your gamemode.
+    aliases: [creative]
+  gma:
+    usage: /<command> [gamemode]
+    desciption: This command will change your gamemode.
+    aliases: [adventure]
+  gmsp:
+    usage: /<command> [gamemode]
+    desciption: This command will change your gamemode.
+    aliases: [spectator]
   ignore:
     usage: /<command> [player]
     description: This command is used to ignore players.
@@ -31,12 +48,16 @@ commands:
   setspawn:
     usage: /<command>
     desciption: This command will set the spawn on your current 'head' location.
-  time:
+  day:
+    usage: /<command> [day/night]
+    desciption: With this command you can set the time
+  night:
     usage: /<command> [day/night]
     desciption: With this command you can set the time
   tp:
     usage: /<command> [player] [target]
     desciption: With this command you can teleport yourself or someone else.
+    aliases: [tele]
   tpa:
     usage: /<command> [player]
     desciption: With this command you can request a teleport.
@@ -49,7 +70,7 @@ commands:
   vanish:
     usage: /<command> [player]
     description: With this command you can enable/disable vanish.
-    aliases: v
+    aliases: [v]
   warp:
     usage: /<command> [warp]
     desciption: This command will teleport you to a specific location.

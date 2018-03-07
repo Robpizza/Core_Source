@@ -15,16 +15,19 @@ Holograms-prefix: "&6&lHolograms  &8&l>> &f"
 
 JoinMessage: "&7Welcome back {player}."
 LeaveMessage: "&7{player} left the server."
+
 Msg-sender: "&bMe &7&l>>> &6{player}"
 Msg-receiver: "&6{player} &7&l>>> &bMe"
 Clearchat-msg: "&f{player} &acleared the chat!"
 Gamemode: "&fYour gamemode is changed to {gamemode}"
 
+#These lines will appear up when a player runs /core help
 Core-Help:
   - "&eHelp line 1"
   - "&dHelp line 2"
   - "&bHelp line 3"
 
+#These lines will appear when a player joins your server
 Welcome-motd:
   - "&7&lWelcome to"
   - "&aThis server"

@@ -2,7 +2,6 @@ package me.robpizza.core.objects;
 
 import me.robpizza.core.commands.Fly;
 import me.robpizza.core.commands.Vanish;
-import net.minecraft.server.v1_8_R3.ExceptionPlayerNotFound;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
@@ -20,19 +19,6 @@ public class CPlayer {
 
     public CPlayer(UUID uuid) {
         p = Bukkit.getPlayer(uuid);
-    }
-
-    /**
-     *
-     * @deprecated Do not use this Method use 'CPlayer(UUID)' or 'CPlayer(PLAYER)' instead!
-     */
-    @Deprecated
-    public CPlayer(String name) throws ExceptionPlayerNotFound {
-        if(Bukkit.getPlayer(name) != null) {
-            p = Bukkit.getPlayer(name);
-        } else {
-            throw new ExceptionPlayerNotFound("Player " + name + " not found!");
-        }
     }
 
 
