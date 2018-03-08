@@ -11,7 +11,7 @@ public class Pingevent implements Listener {
     @EventHandler
     public void onServerPing(ServerListPingEvent e) {
         String motd = ChatColor.translateAlternateColorCodes('&', Main.configs().getCoreConfig().getString("SystemMotd"));
-        motd = motd.replace("{version}", "Stable-1.4.2");
+        motd = motd.replace("{version}", "Stable-1.4.6");
         e.setMotd(ChatColor.translateAlternateColorCodes('&', motd));
     }
 }

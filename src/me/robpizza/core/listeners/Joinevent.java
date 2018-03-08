@@ -19,7 +19,7 @@ public class Joinevent implements Listener {
 
 
 
-        if (Main.configs().getMessagesConfig().getBoolean("JoinLeaveMessage")) {
+        if (Main.configs().getCoreConfig().getBoolean("JoinLeaveMessage")) {
             String JoinMessage = Main.configs().getMessagesConfig().getString("JoinMessage");
             JoinMessage = JoinMessage.replace("{player}", p.getName());
             e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', JoinMessage));
